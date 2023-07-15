@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nyanza Complex Rifle Club</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}" style="position: static;">
+
+</head>
+
+    <header>
+  <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+  <span class="logo-text" style="color: white;">NYANZA COMPLEX RIFLE CLUB</span>
+</header>
+
+<body>
+    <nav class="navbar">
+    <div class="navbar-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="navbar-menu" id="navbarMenu">
+      <li class="navbar-item"><button><a href="/home">Home Page</a></button></li>
+      <li class="navbar-item"><button ><a href="/members">View Members</a></button></li>
+    </ul>
+  </nav>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+<div id="first">
+    <h1>Register Member</h1>
+    <form method="POST" action="/add_member">
+        <label for="member_number">Member Number:</label>
+        <input type="text" name="member_number" id="member_number" required>
+        <br>
+        <label for="name">Full Name:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label for="postal_address">Postal Address:</label>
+        <input type="text" name="postal_address" id="postal_address" required>
+    <br>
+    <label for="fc_no">FC NO:</label>
+    <input type="null" name="fc_no" id="fc_no" required>
+    <br>
+    <label for="id_number">ID NUMBER:</label>
+    <input type="number" name="id_number" id="id_number" required>
+    <br>
+    <br>
+    <label for="county">Choose Your County:</label>
+     <select name="county" id="county">
+        <option value="Mombasa">Mombasa</option>
+        <option value="Kwale">Kwale</option>
+        <option value="Kilifi">Kilifi</option>
+        <option value="Tana River">Tana River</option>
+        <option value="Lamu">Lamu</option>
+        <option value="Taita/Taveta">Taita/Taveta</option>
+        <option value="Garissa">Garissa</option>
+        <option value="Wajir">Wajir</option>
+        <option value="Mandera">Mandera</option>
+        <option value="Marsabit">Marsabit</option>
+        <option value="Isiolo">Isiolo</option>
+        <option value="Meru">Meru</option>
+        <option value="Tharaka-Nithi">Tharaka-Nithi</option>
+        <option value="Embu">Embu</option>
+        <option value="Kitui">Kitui</option>
+        <option value="Machakos">Machakos</option>
+        <option value="Makueni">Makueni</option>
+        <option value="Nyandarua">Nyandarua</option>
+        <option value="Nyeri">Nyeri</option>
+        <option value="Kirinyaga">Kirinyaga</option>
+        <option value="Murang’a">Murang’a</option>
+        <option value="Kiambu">Kiambu</option>
+        <option value="Turkana">Turkana</option>
+        <option value="West Pokot">West Pokot</option>
+        <option value="Samburu">Samburu</option>
+        <option value="Trans Nzoia">Trans Nzoia</option>
+        <option value="Uasin Gishu">Uasin Gishu</option>
+        <option value="Elgeyo/Marakwet">Elgeyo/Marakwet</option>
+        <option value="Nandi">Nandi</option>
+        <option value="Baringo">Baringo</option>
+        <option value="Laikipia">Laikipia</option>
+        <option value="Nakuru">Nakuru</option>
+        <option value="Narok">Narok</option>
+        <option value="Kajiado">Kajiado</option>
+        <option value="Kericho">Kericho</option>
+        <option value="Bomet">Bomet</option>
+        <option value="Kakamega">Kakamega</option>
+        <option value="Vihiga">Vihiga</option>
+        <option value="Bungoma">Bungoma</option>
+        <option value="Busia">Busia</option>
+        <option value="Siaya">Siaya</option>
+        <option value="Kisumu">Kisumu</option>
+        <option value="Homa Bay">Homa Bay</option>
+        <option value="Migori">Migori</option>
+        <option value="Kisii">Kisii</option>
+        <option value="Nyamira">Nyamira</option>
+        <option value="Nairobi City">Nairobi City</option>
+
+    </select>
+    <br>
+    <br>
+    <label for="telephone">Telephone Number:</label>
+    <input type="null" name="telephone" id="telephone" required>
+    <br>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+    <br>
+    <label for="membership_category">Choose Membership Category:</label>
+    <select name="membership_category" id="membership_category">
+        <option value="Full_Member">Full_Member</option>
+        <option value="Associate_Memebership">Management</option>
+        <option value="Junior_Membership">Junior_Member</option>
+        <option value="Unattached_Junior_Member">Unattached Junior Member</option>
+        <option value="Family_Membership">Family_Membership</option>
+        <option value="Platinum_Membership">Platinum_Member</option>
+        <option value="Honorary_Membership">Honorary_Member</option>
+    </select>
+    <br>
+    <br>
+    <label for="spouse">Spouse's Name:</label>
+    <input type="text" name="spouse" id="spouse" required>
+    <br>
+    <label for="Spouse_contact">Spouse contact:</label>
+    <input type="number" name="Spouse_contact" id="Spouse_contact" required>
+    <br>
+    <label for="company">Company Name:</label>
+    <input type="text" name="company" id="company" required>
+    <br>
+    <label for="proposer">Proposer:</label>
+    <input type="text" name="proposer" id="proposer" required>
+    <br>
+    <button type="submit" value="Add Member">Register Member</button>
+</div>
+</form>
+</body>
+</html>
